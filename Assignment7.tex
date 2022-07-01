@@ -1,0 +1,60 @@
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{Assignment 7} 
+\author{Beeram Sandya cs21btech11006}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Question}
+\begin{frame}{Question}
+\begin{block}{Papoulis chap 10 Exercise 10.12}
+Show that if the process $x(t)\cos\omega t + y(t)\sin\omega t $ is normal and WSS, then its statistical properties are determined in terms of the variance of the process $z(t) = x(t) + jy(t)$.
+\end{block}
+\end{frame}
+
+
+% Blocks frame
+\section{Solution}
+\begin{frame}{Solution}
+From the stationarity of the process $x(t)\cos\omega t + y(t)\sin\omega t $ it folows that,\\
+(i)\[ C_{xx}(\tau)=C_{yy}(\tau)\]and \[C_{xy}(\tau)=-C_{yx}(\tau)\]  
+Using the above identities, we shall express the joint density $f(X,Y)$ of the $2n$ random variables as
+\[X=[x(t_1),....,x(t_n)]\]
+\[Y=[y(t_1),....,y(t_n)]\]
+
+\end{frame} 
+
+\section{Solution}
+\begin{frame}{Solution}
+in terms of the covariance matrix $C_{zz}$ of the complex vector $Z=X+jY$.From $(i)$
+it follows that 
+\[E\{x(t_i)x(t_j)\}=E\{y(t_i)y(t_j)\}\] 
+\[E\{x(t_i)y(t_j)\}=-E\{y(t_i)x(t_j)\}\]
+This results $C_{XX}=C_{YY}$ and $C_{XY}=-C_{YX}$.
+\end{frame} 
+
+\end{document}
